@@ -11,11 +11,11 @@
         <h1>XKCD Password Generator!</h1>
       </div>
 
-      <form role="form">
+      <form role="form" method="POST" action="index.php">
         <div class="form-group form-inline">
           <h3>
             <span class="label label-default" for="numberOfWords">Number of Words</span>
-            <select class="form-control">
+            <select class="form-control" name="how_many">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -28,9 +28,23 @@
             </select>
           </h3>
         </div>
-        <button type="submit" class="btn btn-default">Get Me!</button>
+        <button type="submit" class="btn btn-default" value="click" name="get_password">Get Me!</button>
       </form>  
     </div>
   </body>
 </html>
+
+<?php
+function get_password($password_length)
+{
+    return "xxxxx".$password_length;
+}
+
+if(isset($_POST['get_password']))
+{
+    $password_length = $_POST["how_many"];
+    $password = get_password($password_length);
+    echo $password;
+} 
+?>
 
