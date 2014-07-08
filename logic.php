@@ -85,7 +85,7 @@ function get_password($password_length, $needs_special_chars = 0, $needs_numeric
 
     if($needs_special_chars)
     {
-        $randword_index = mt_rand(0, $password_length);
+        $randword_index = mt_rand(0, $password_length-1);
         $syms = symbols();
         $rand_symbol = $syms[mt_rand(0,count($syms)-1)];
         $password_array[$randword_index] .= $rand_symbol;
@@ -93,7 +93,7 @@ function get_password($password_length, $needs_special_chars = 0, $needs_numeric
 
     if($needs_numericals)
     {
-        $randword_index = mt_rand(0, $password_length);
+        $randword_index = mt_rand(0, $password_length-1);
         $password_array[$randword_index] .= mt_rand(0,9);
     }
 
