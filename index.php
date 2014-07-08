@@ -31,7 +31,7 @@
             </select>
           </h3>
         </div>
-        <button type="submit" class="btn btn-default" value="click" name="get_password">Get Me!</button>
+        <button type="submit" class="btn btn-default" value="click" name="get_password">Generate password!</button>
       </form>  
     </div>
 
@@ -43,7 +43,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="password-dismiss">&times;</button>
-                    <h4 class="modal-title">XKCD Generate password</h4>
+                    <h4 class="modal-title">XKCD  password</h4>
                 </div>
                 <div class="modal-body">
                 <?php echo $password; ?>
