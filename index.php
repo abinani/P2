@@ -30,6 +30,22 @@
               <option>9</option>
             </select>
           </h3>
+          <p>
+            <div class="checkbox ">
+              <label>
+                <input type="checkbox" name="needs_special_characters">
+                Add a symbol
+              </label>
+            </div>
+          </p>
+          <p>
+            <div class="checkbox ">
+              <label>
+                <input type="checkbox" name="needs_numbers">
+                Add a number
+              </label>
+            </div>
+          </p>
         </div>
         <button type="submit" class="btn btn-default" value="click" name="get_password">Generate password!</button>
       </form>  
@@ -52,7 +68,7 @@
         </div> 
     </div>
 
-    <? if($password) {?>
+    <?php if($password) {?>
     <script type="text/javascript">
     $(window).load(function(){
         $('#my-modal').modal({show:true});
