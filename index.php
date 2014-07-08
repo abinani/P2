@@ -12,6 +12,7 @@
     <div class="container" role="main">
       <div class="jumbotron">
         <h1>XKCD Password Generator!</h1>
+        <p> This is a simple app for generating XKCD type passwords. XKCD passwords are designed based on the notion that long easy to remember passwords are better than a short random jumble of characters.</p>    
       </div>
 
       <form role="form" method="POST" action="index.php">
