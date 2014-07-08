@@ -54,7 +54,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <div id="my-modal" class="modal fade">
+    <div id="password-modal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -71,7 +71,7 @@
     <?php if($password) {?>
     <script type="text/javascript">
     $(window).load(function(){
-        $('#my-modal').modal({show:true});
+        $('#password-modal').modal({show:true});
     });
     </script>
     <? } ?>
