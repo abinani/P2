@@ -71,7 +71,7 @@ function symbols()
 }
 
 
-function get_password($password_length, $needs_special_chars = 0, $needs_numericals = 0)
+function get_password($password_length, $needs_special_chars = 0, $needs_numericals = 0, $needs_uppercase = 0)
 {
     $dict = dictionary();
     $length = count($dict);
@@ -80,6 +80,11 @@ function get_password($password_length, $needs_special_chars = 0, $needs_numeric
     for ($i = 1; $i <= $password_length; ++$i) {
         $index = mt_rand(0, $length-1);
         $password_array[] = $dict[$index];
+    }
+
+    if($needs_uppercase)
+    {
+       $password_array[0] = ucfirst($password_array[0]);
     }
 
 
@@ -106,7 +111,8 @@ if(isset($_POST['get_password']))
     $password_length = $_POST["how_many"];
     $needs_special_chars = $_POST["needs_special_characters"];
     $needs_numbers = $_POST["needs_numbers"];
-    $password = get_password($password_length, $needs_special_chars, $needs_numbers);
+    $needs_uc = $_POST["needs_uppercase"];
+    $password = get_password($password_length, $needs_special_chars, $needs_numbers, $needs_uc);
 } 
 
 

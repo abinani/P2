@@ -46,7 +46,15 @@
               </label>
             </div>
           </p>
-        </div>
+          <p>
+            <div class="checkbox ">
+              <label>
+                <input type="checkbox" name="needs_uppercase">
+                Uppercase the first word
+              </label>
+            </div>
+          </p>
+         </div>
         <button type="submit" class="btn btn-default" value="click" name="get_password">Generate password!</button>
       </form>  
     </div>
